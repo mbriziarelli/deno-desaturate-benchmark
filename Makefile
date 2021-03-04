@@ -1,3 +1,3 @@
 .PHONY: lint
 lint:
-	deno lint --unstable .
+	deno lint --unstable
