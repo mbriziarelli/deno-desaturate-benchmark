@@ -3,4 +3,4 @@ export {
   desaturateBT601,
   desaturateLuma,
   desaturateMinMax,
-} from './desaturate.ts'
+} from "./desaturate.ts";

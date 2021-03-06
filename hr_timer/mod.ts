@@ -1,2 +1,2 @@
-export { timerStart, timerEnd } from './timer.ts'
-export { displayTime } from './display.ts'
+export { timerEnd, timerStart } from "./timer.ts";
+export { displayTime } from "./display.ts";

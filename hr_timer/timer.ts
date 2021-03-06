@@ -1,22 +1,22 @@
-import { NS_PER_SEC } from './constants.ts'
+import { NS_PER_SEC } from "./constants.ts";
 
-const runningTimers: { [_: string]: number } = {}
+const runningTimers: { [_: string]: number } = {};
 
 export function timerStart(timerDesc: string) {
   if (runningTimers[timerDesc]) {
-    throw new Error(`"${timerDesc}" timer is already running.`)
+    throw new Error(`"${timerDesc}" timer is already running.`);
   } else {
-    runningTimers[timerDesc] = performance.now()
+    runningTimers[timerDesc] = performance.now();
   }
 }
 
 export function timerEnd(timerDesc: string) {
   if (!runningTimers[timerDesc]) {
-    throw new Error(`"${timerDesc}" timer doesn't exists.`)
+    throw new Error(`"${timerDesc}" timer doesn't exists.`);
   } else {
-    const start = runningTimers[timerDesc]
+    const start = runningTimers[timerDesc];
 
-    delete runningTimers[timerDesc]
-    return (performance.now() - start) * NS_PER_SEC
+    delete runningTimers[timerDesc];
+    return (performance.now() - start) * NS_PER_SEC;
   }
 }
